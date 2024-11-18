@@ -13,10 +13,6 @@ RUN apt-get update && apt-get install -y python3-tk x11-apps
 # Install the project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Set the environment variable for OpenAI API key
-# (you'll need to provide the actual key when running the container)
-ENV OPENAI_API_KEY=your_OpenAI_API_key
-
 # Expose the port for visualizer/app.py
 EXPOSE 8000
 
