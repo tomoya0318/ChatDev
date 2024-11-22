@@ -12,6 +12,21 @@
 
 </p>
 
+## このフォークされたリポジトリの目的
+このリポジトリは環境構築をdocker composeを用いてセットアップを行う方法です．
+1. Dockerコンテナの作成
+```
+docker compose up -d
+```
+2. Dockerコンテナへ入る
+   この操作によって，dockerコンテナ内でローカル環境と同じように作業を行うことができます
+```
+docker exec -it chatdev bash
+```
+dockerコンテナを止めたい場合
+```
+docker compose down
+```
 ## 📖 Overview
 
 - **ChatDev** stands as a **virtual software company** that operates through various **intelligent agents** holding
@@ -105,7 +120,6 @@ To get started, follow these steps:
    ```
    git clone https://github.com/OpenBMB/ChatDev.git
    ```
-
 2. **Set Up Python Environment:** Ensure you have a version 3.9 or higher Python environment. You can create and
    activate this environment using the following commands, replacing `ChatDev_conda_env` with your preferred environment
    name:
