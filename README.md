@@ -14,16 +14,28 @@
 
 ## このフォークされたリポジトリの目的
 このリポジトリは環境構築をdocker composeを用いてセットアップを行う方法です．
+### 環境変数の設定
+openAIのAPIkeyを設定する必要があります．
+1. `.env.sample`のファイル名を`.env`に変更する
+```
+mv .env.sample .env
+```
+2. 自分のopenAIのAPIkeyを設定
+```
+OPENAI_API_KEY="自身のopenAIのapikey"
+```
+
+### Dockerコンテナの設定
 1. Dockerコンテナの作成
 ```
 docker compose up -d
 ```
-2. Dockerコンテナへ入る
+1. Dockerコンテナへ入る
    この操作によって，dockerコンテナ内でローカル環境と同じように作業を行うことができます
 ```
 docker exec -it chatdev bash
 ```
-dockerコンテナを止めたい場合
+**dockerコンテナを止めたい場合**
 ```
 docker compose down
 ```
